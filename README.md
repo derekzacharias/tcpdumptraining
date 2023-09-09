@@ -1,3 +1,75 @@
+#Install WSL
+Installing WSL 2 (Windows Subsystem for Linux version 2) requires a few specific steps. Before starting, ensure you're running Windows 10 Version 1903 or higher, with Build 18362 or higher. 
+
+
+### 1. Enable WSL
+
+#### Using PowerShell:
+
+1. Open PowerShell as Administrator.
+2. Run the following command to enable the WSL feature:
+   ```powershell
+   wsl --install
+   ```
+
+   OR if you are on an older version:
+
+   ```powershell
+   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+   ```
+
+#### Using Windows Features:
+
+1. Open the Start Menu and search for “Turn Windows features on or off”.
+2. Scroll down and check “Windows Subsystem for Linux”.
+3. Click “OK”.
+
+### 2. Enable the 'Virtual Machine Platform' feature
+
+This step is unique to WSL 2, as it uses a different architecture than WSL 1. 
+
+1. Open PowerShell as Administrator.
+2. Run the following command:
+   ```powershell
+   Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+   ```
+
+3. Restart your computer.
+
+### 3. Set WSL 2 as the default version
+
+Open PowerShell and set WSL 2 as the default:
+```powershell
+wsl --set-default-version 2
+```
+
+### 4. Install a Linux distribution
+
+1. Open the Microsoft Store.
+2. Search for "Linux" to see a list of available Linux distributions.
+3. Select your preferred distribution (e.g., Ubuntu, Debian, Fedora, etc.).
+4. Click "Install".
+
+### 5. Set up your Linux distribution
+
+1. Once the installation completes, open the Start Menu.
+2. Search for your installed Linux distribution (e.g., "Ubuntu").
+3. Launch the application. This will open a terminal window.
+4. On the first run, it will finalize the installation and prompt you to create a user and password. This user will be the default superuser and will have sudo access.
+
+### 6. (Optional) Confirm WSL Version
+
+To ensure that your Linux distribution is running with WSL 2, open PowerShell and run:
+
+```powershell
+wsl --list --verbose
+```
+
+You should see a "2" under the "VERSION" column for your distribution.
+
+That's it! You should now have WSL 2 up and running on your Windows machine. Remember, you can always switch between WSL 1 and WSL 2 for any given distribution if needed.
+
+
 # tcpdumptraining
 Creating a simulated environment to generate and capture malicious traffic can be an invaluable tool for training and testing. Docker provides an isolated environment for such experiments. Here's a step-by-step guide to build this setup:
 
