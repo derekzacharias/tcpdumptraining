@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Install WSL
 Installing WSL 2 (Windows Subsystem for Linux version 2) requires a few specific steps. Before starting, ensure you're running Windows 10 Version 1903 or higher, with Build 18362 or higher. 
 
@@ -71,6 +72,9 @@ That's it! You should now have WSL 2 up and running on your Windows machine. Rem
 
 
 # tcpdumptraining
+=======
+# TCPdump training
+>>>>>>> 62b60a7af88791e1a25077a26bf0f915399db237
 Creating a simulated environment to generate and capture malicious traffic can be an invaluable tool for training and testing. Docker provides an isolated environment for such experiments. Here's a step-by-step guide to build this setup:
 
 ### 1. **Setup Docker Environment**:
