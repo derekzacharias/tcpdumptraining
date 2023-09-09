@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-#Install WSL
+# Setting up the enviroment - WSL
+
+
+### 1. Install WSL
 Installing WSL 2 (Windows Subsystem for Linux version 2) requires a few specific steps. Before starting, ensure you're running Windows 10 Version 1903 or higher, with Build 18362 or higher. 
 
-
-### 1. Enable WSL
 
 #### Using PowerShell:
 
@@ -19,46 +19,30 @@ Installing WSL 2 (Windows Subsystem for Linux version 2) requires a few specific
    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
    ```
 
-#### Using Windows Features:
 
-1. Open the Start Menu and search for “Turn Windows features on or off”.
-2. Scroll down and check “Windows Subsystem for Linux”.
-3. Click “OK”.
 
-### 2. Enable the 'Virtual Machine Platform' feature
-
-This step is unique to WSL 2, as it uses a different architecture than WSL 1. 
-
-1. Open PowerShell as Administrator.
-2. Run the following command:
-   ```powershell
-   Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
-   ```
-
-3. Restart your computer.
-
-### 3. Set WSL 2 as the default version
+### 2. Set WSL 2 as the default version
 
 Open PowerShell and set WSL 2 as the default:
 ```powershell
 wsl --set-default-version 2
 ```
 
-### 4. Install a Linux distribution
+### 3. Install a Linux distribution
 
 1. Open the Microsoft Store.
 2. Search for "Linux" to see a list of available Linux distributions.
-3. Select your preferred distribution (e.g., Ubuntu, Debian, Fedora, etc.).
+3. Select your preferred distribution (e.g., Ubuntu. ).
 4. Click "Install".
 
-### 5. Set up your Linux distribution
+### 4. Set up your Linux distribution
 
 1. Once the installation completes, open the Start Menu.
 2. Search for your installed Linux distribution (e.g., "Ubuntu").
 3. Launch the application. This will open a terminal window.
 4. On the first run, it will finalize the installation and prompt you to create a user and password. This user will be the default superuser and will have sudo access.
 
-### 6. (Optional) Confirm WSL Version
+### 5. (Optional) Confirm WSL Version
 
 To ensure that your Linux distribution is running with WSL 2, open PowerShell and run:
 
@@ -71,10 +55,10 @@ You should see a "2" under the "VERSION" column for your distribution.
 That's it! You should now have WSL 2 up and running on your Windows machine. Remember, you can always switch between WSL 1 and WSL 2 for any given distribution if needed.
 
 
-# tcpdumptraining
-=======
-# TCPdump training
->>>>>>> 62b60a7af88791e1a25077a26bf0f915399db237
+
+
+# Setting up the enviroment - Docker
+
 Creating a simulated environment to generate and capture malicious traffic can be an invaluable tool for training and testing. Docker provides an isolated environment for such experiments. Here's a step-by-step guide to build this setup:
 
 ### 1. **Setup Docker Environment**:
@@ -118,7 +102,9 @@ Creating a simulated environment to generate and capture malicious traffic can b
   docker run --rm -it --network=isolated_nw --name attacker kali /bin/bash
   ```
 
-### 4. **Capture Traffic Using TCPDUMP**:
+
+
+#  **Capture Traffic Using TCPDUMP**:
 
 - In your host system or another Docker container, start capturing traffic:
   ```bash
@@ -127,7 +113,7 @@ Creating a simulated environment to generate and capture malicious traffic can b
 
   This will capture all the traffic on the victim's `eth0` interface and save it to `capture.pcap`.
 
-### 5. **Simulate Malicious Traffic**:
+###  **Simulate Malicious Traffic**:
 
 From the attacker container (Kali Linux is recommended due to its suite of penetration testing tools), you can generate malicious traffic:
 
@@ -142,7 +128,7 @@ From the attacker container (Kali Linux is recommended due to its suite of penet
 
 - Other tools in Kali Linux such as `metasploit`, `armitage`, etc., can also be used to simulate different kinds of malicious activities.
 
-### 6. **Querying the Captured Traffic**:
+###  **Querying the Captured Traffic**:
 
 After generating malicious traffic, analyze the `capture.pcap` file:
 
