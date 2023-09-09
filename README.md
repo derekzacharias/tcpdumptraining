@@ -1,4 +1,4 @@
-# tcpdump training
+# TCPdump training
 Creating a simulated environment to generate and capture malicious traffic can be an invaluable tool for training and testing. Docker provides an isolated environment for such experiments. Here's a step-by-step guide to build this setup:
 
 ### 1. **Setup Docker Environment**:
