@@ -23,8 +23,12 @@ ssh student@IP_ADDRESS_OF_SERVER1
 - In the victim container, you might want to run a basic web server or service that the attacker can target. For instance, a basic Python HTTP server:
   ```bash
   apt update && apt install -y python3
-echo "Hello World" > index.html
-python3 -m http.server 80
+  ```
+
+- Run a basis web server
+  ```bash
+  echo "Hello World" > index.html
+  python3 -m http.server 80
   ```
 
 - Launch an "attacker" container within the same network:
