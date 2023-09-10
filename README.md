@@ -1,5 +1,11 @@
 ### Download VM
+Double click OVA and deploy
 
+- ssh to server1 VM (Docker is running on this VM)
+
+```
+ssh student@ip_address_of_server1
+```
 
 
 
