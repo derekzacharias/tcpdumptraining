@@ -10,14 +10,14 @@ ssh to server1 VM (Docker is running on this VM)
 - Password: 1qazxsw2!QAZXSW@
 
 ```bash
-ssh student@ip_address_of_server1
+ssh student@IP_ADDRESS_OF_SERVER1
 ```
 
 ###  **Deploying Victim and Attacker Containers**:
 
 - Launch a "victim" container within the network:
   ```bash
-  docker run --rm -it --name victim ubuntu /bin/bash
+  docker run --rm -it --network=isolated_nw --name victim ubuntu /bin/bash
   ```
 
 - In the victim container, you might want to run a basic web server or service that the attacker can target. For instance, a basic Python HTTP server:
@@ -28,7 +28,7 @@ ssh student@ip_address_of_server1
 
 - Launch an "attacker" container within the same network:
   ```bash
-  docker run --rm -it --name attacker kalilinux/kali-rolling /bin/bash
+  docker run --rm -it --network=isolated_nw --name attacker kalilinux/kali-rolling /bin/bash
   ```
 
 #  **Capture Traffic Using TCPDUMP**:
@@ -46,7 +46,7 @@ From the attacker container (Kali Linux is recommended due to its suite of penet
 
 - **Port Scanning** with Nmap:
   ```bash
-  nmap victim
+  nmap VICTIM_IP_ADDRESS
   ```
 
 - **HTTP-based Attacks** using tools like `curl` or `sqlmap`.
