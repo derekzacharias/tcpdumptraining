@@ -19,14 +19,14 @@
 
 - Launch an "attacker" container within the same network:
   ```bash
-  docker run --rm -it --network=isolated_nw --name attacker kali /bin/bash
+  docker run --rm -it --name attacker kalilinux/kali-rolling /bin/bash
   ```
 
 #  **Capture Traffic Using TCPDUMP**:
 
 - In your host system or another Docker container, start capturing traffic:
   ```bash
-  docker exec -it victim tcpdump -i eth0 -w /tmp/capture.pcap
+  tcpdump -i enp0s3 -w /tmp/capture.pcap
   ```
 
   This will capture all the traffic on the victim's `eth0` interface and save it to `capture.pcap`.
