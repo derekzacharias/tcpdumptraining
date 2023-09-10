@@ -1,6 +1,6 @@
 
 # **SSH to Server1**
-Open the terminal on the desktop
+Open the the terminal and then open two additional tabs (3 Total)
 
 - ssh to server1 VM (Docker is running on this VM)
 - Password: 1qazxsw2!QAZXSW@
