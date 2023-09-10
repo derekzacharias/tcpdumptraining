@@ -18,7 +18,6 @@ ssh student@ip_address_of_server1
 
 - In the victim container, you might want to run a basic web server or service that the attacker can target. For instance, a basic Python HTTP server:
   ```bash
-  apt update && apt install -y python3
   echo "Hello World" > index.html
   python3 -m http.server 80
   ```
