@@ -2,6 +2,10 @@
 # **SSH to Server1**
 Open the the terminal and then open two additional tabs (3 Total)
 
+  Tab 1 - TCPdump traffic
+  Tab 2 - ssh to Victim
+  Tab 3 - ssh to Attcker 
+
 - ssh to server1 VM (Docker is running on this VM)
 - Password: 1qazxsw2!QAZXSW@
 
