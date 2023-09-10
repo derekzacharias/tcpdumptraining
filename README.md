@@ -1,11 +1,10 @@
 
 # **SSH to Server1**
 - ssh to server1 VM (Docker is running on this VM)
+- Password: 1qazxsw2!QAZXSW@
 
-```
+```bash
 ssh student@ip_address_of_server1
-
-Password: 1qazxsw2!QAZXSW@
 ```
 
 ###  **Deploying Victim and Attacker Containers**:
@@ -74,7 +73,6 @@ To identify potential malicious activities, you can search for patterns typical 
 Don't forget to clean up after your experiments to free up resources:
 ```bash
 docker stop victim attacker
-docker network rm isolated_nw
 ```
 
 ### Note:
