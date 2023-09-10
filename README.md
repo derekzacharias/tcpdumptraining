@@ -3,7 +3,24 @@
 
 
 
+### 3. **Deploying Victim and Attacker Containers**:
 
+- Launch a "victim" container within the network:
+  ```bash
+  docker run --rm -it --name victim ubuntu /bin/bash
+  ```
+
+- In the victim container, you might want to run a basic web server or service that the attacker can target. For instance, a basic Python HTTP server:
+  ```bash
+  apt update && apt install -y python3
+  echo "Hello World" > index.html
+  python3 -m http.server 80
+  ```
+
+- Launch an "attacker" container within the same network:
+  ```bash
+  docker run --rm -it --network=isolated_nw --name attacker kali /bin/bash
+  ```
 
 #  **Capture Traffic Using TCPDUMP**:
 
