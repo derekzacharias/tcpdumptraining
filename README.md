@@ -1,6 +1,5 @@
-### Download VM
-Double click OVA and deploy to VirtualBOX
 
+# **SSH to Server1**
 - ssh to server1 VM (Docker is running on this VM)
 
 ```
@@ -9,9 +8,7 @@ ssh student@ip_address_of_server1
 Password: 1qazxsw2!QAZXSW@
 ```
 
-
-
-### 3. **Deploying Victim and Attacker Containers**:
+###  **Deploying Victim and Attacker Containers**:
 
 - Launch a "victim" container within the network:
   ```bash
@@ -72,7 +69,7 @@ tcpdump -r capture.pcap 'tcp port 80'
 
 To identify potential malicious activities, you can search for patterns typical of known attacks (e.g., numerous SYN requests, HTTP requests with SQLi patterns, etc.).
 
-### 7. **Cleanup**:
+###  **Cleanup**:
 
 Don't forget to clean up after your experiments to free up resources:
 ```bash
