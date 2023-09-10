@@ -1,10 +1,12 @@
 ### Download VM
-Double click OVA and deploy
+Double click OVA and deploy to VirtualBOX
 
 - ssh to server1 VM (Docker is running on this VM)
 
 ```
 ssh student@ip_address_of_server1
+
+Password: 1qazxsw2!QAZXSW@
 ```
 
 
@@ -35,7 +37,7 @@ ssh student@ip_address_of_server1
   tcpdump -i enp0s3 -w /tmp/capture.pcap
   ```
 
-  This will capture all the traffic on the victim's `eth0` interface and save it to `capture.pcap`.
+  This will capture all the traffic on the victim's `enp0s3` interface and save it to `capture.pcap`.
 
 ###  **Simulate Malicious Traffic**:
 
